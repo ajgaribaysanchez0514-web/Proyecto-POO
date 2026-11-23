@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "Banco.h"
 using namespace std;
 
@@ -12,6 +13,19 @@ public:
         cout << "==================================================" << endl;
         cout << texto << endl;
         cout << "==================================================" << endl;
+    }
+
+    void Limpiar()
+    {
+        system("cls");
+    }
+
+    void Pausar()
+    {
+        string basura;
+        cout << endl
+             << "Presiona Enter para continuar...";
+        getline(cin, basura);
     }
 
     int LeerEntero()
@@ -150,7 +164,7 @@ public:
         int opcion = -1;
         while (opcion != 0)
         {
-            cout << endl;
+            Limpiar();
             Titulo("LISTA DE CLIENTES");
             cout << "1. Ver la lista de clientes" << endl;
             cout << "2. Crear cuenta" << endl;
@@ -176,6 +190,10 @@ public:
             default:
                 cout << "Opción no válida." << endl;
             }
+            if (opcion != 0)
+            {
+                Pausar();
+            }
         }
     }
 
@@ -184,7 +202,7 @@ public:
         int opcion = -1;
         while (opcion != 0)
         {
-            cout << endl;
+            Limpiar();
             Titulo("CUENTA");
             cout << "1. Depositar" << endl;
             cout << "2. Retirar" << endl;
@@ -210,6 +228,10 @@ public:
             default:
                 cout << "Opción no válida." << endl;
             }
+            if (opcion != 0)
+            {
+                Pausar();
+            }
         }
     }
 
@@ -225,7 +247,7 @@ public:
         int opcion = -1;
         while (opcion != 0)
         {
-            cout << endl;
+            Limpiar();
             Titulo("MENÚ PRINCIPAL");
             cout << "1. Lista" << endl;
             cout << "2. Cuenta" << endl;
@@ -246,15 +268,18 @@ public:
                 break;
             case 3:
                 EstadoDeCuenta();
+                Pausar();
                 break;
             case 4:
                 Ejecutar();
+                Pausar();
                 break;
             case 0:
                 cout << "Hasta luego." << endl;
                 break;
             default:
                 cout << "Opción no válida." << endl;
+                Pausar();
             }
         }
     }
