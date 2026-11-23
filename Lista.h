@@ -56,7 +56,19 @@ public:
                 return l[i]->c.NoCuenta;
             }
         }
-        return -1; // no se encontró
+        return -1;
+    }
+
+    Cliente *ObtenerCliente(int noCuenta)
+    {
+        for (int i = 0; i < p; i++)
+        {
+            if (l[i]->c.NoCuenta == noCuenta)
+            {
+                return l[i];
+            }
+        }
+        return NULL;
     }
 
     Cuenta *ObtenerCuenta(int noCuenta)
@@ -68,7 +80,7 @@ public:
                 return l[i]->ObtenerCuenta();
             }
         }
-        return NULL; // no se encontró
+        return NULL;
     }
 
     void Estado()

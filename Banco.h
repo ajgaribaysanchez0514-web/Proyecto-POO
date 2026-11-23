@@ -56,7 +56,21 @@ public:
         {
             return cuenta->ConsultarSaldo();
         }
-        return -1; // no se encontró
+        return -1;
+    }
+
+    void EstadoCuenta(int noCuenta)
+    {
+        Cliente *cliente = c.ObtenerCliente(noCuenta);
+        if (cliente != NULL)
+        {
+            cliente->Estado();
+            cout << endl;
+        }
+        else
+        {
+            cout << "No existe esa cuenta." << endl;
+        }
     }
 
     void Estado()
