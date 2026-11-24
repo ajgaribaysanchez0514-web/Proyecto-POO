@@ -1,58 +1,24 @@
 #ifndef PERSONA_H
 #define PERSONA_H
 
-#include <iostream>
 #include <string>
-using namespace std;
 
 class Persona
 {
 public:
-    string Nombre;
-    string Direccion;
-    string Telefono;
+    std::string Nombre;
+    std::string Direccion;
+    std::string Telefono;
 
-    Persona(string nombre, string direccion, string telefono)
-    {
-        Nombre = nombre;
-        Direccion = direccion;
-        Telefono = telefono;
-    }
+    Persona(std::string nombre, std::string direccion, std::string telefono);
 
-    string ObtenerNombre()
-    {
-        return Nombre;
-    }
-
-    string ObtenerDireccion()
-    {
-        return Direccion;
-    }
-
-    string ObtenerTelefono()
-    {
-        return Telefono;
-    }
-
-    void ModificarNombre(string nombre)
-    {
-        Nombre = nombre;
-    }
-
-    void ModificarDireccion(string direccion)
-    {
-        Direccion = direccion;
-    }
-
-    void ModificarTelefono(string telefono)
-    {
-        Telefono = telefono;
-    }
-
-    void Estado()
-    {
-        cout << "nombre=" << Nombre << ", dirección=" << Direccion << ", teléfono=" << Telefono;
-    }
+    std::string ObtenerNombre();
+    std::string ObtenerDireccion();
+    std::string ObtenerTelefono();
+    void ModificarNombre(std::string nombre);
+    void ModificarDireccion(std::string direccion);
+    void ModificarTelefono(std::string telefono);
+    void Estado();
 };
 
 #endif

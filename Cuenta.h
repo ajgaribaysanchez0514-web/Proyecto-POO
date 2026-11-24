@@ -1,9 +1,6 @@
 #ifndef CUENTA_H
 #define CUENTA_H
 
-#include <iostream>
-using namespace std;
-
 class Cuenta
 {
 public:
@@ -11,46 +8,13 @@ public:
     int NoCuenta;
     double Saldo;
 
-    Cuenta(double saldo)
-    {
-        NoCuenta = N;
-        Saldo = saldo;
-        IncrementarN();
-    }
+    Cuenta(double saldo);
 
-    static void IncrementarN()
-    {
-        N++;
-    }
-
-    void Depositar(double cantidad)
-    {
-        Saldo = Saldo + cantidad;
-    }
-
-    void Retirar(double cantidad)
-    {
-        if (cantidad <= Saldo)
-        {
-            Saldo = Saldo - cantidad;
-        }
-        else
-        {
-            cout << "Saldo insuficiente" << endl;
-        }
-    }
-
-    double ConsultarSaldo()
-    {
-        return Saldo;
-    }
-
-    void Estado()
-    {
-        cout << "Cuenta[noCuenta=" << NoCuenta << ", saldo=$" << Saldo << "]";
-    }
+    static void IncrementarN();
+    void Depositar(double cantidad);
+    void Retirar(double cantidad);
+    double ConsultarSaldo();
+    void Estado();
 };
-
-int Cuenta::N = 1;
 
 #endif
