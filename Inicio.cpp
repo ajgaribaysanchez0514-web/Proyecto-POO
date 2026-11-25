@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
+
 void Inicio::Titulo(string texto)
 {
     cout << "==================================================" << endl;
@@ -57,6 +58,7 @@ string Inicio::LeerTexto(string pregunta)
     getline(cin, texto);
     return texto;
 }
+
 void Inicio::CrearCuenta()
 {
     if (miBanco.c.p >= 10)
@@ -108,6 +110,7 @@ void Inicio::Depositar()
     miBanco.Depositar(noCuenta, cantidad);
     cout << "Depósito realizado. Saldo actual: $" << miBanco.ObtenerSaldo(noCuenta) << endl;
 }
+
 void Inicio::Retirar()
 {
     cout << "Número de cuenta: ";
@@ -145,6 +148,7 @@ void Inicio::ConsultarSaldo()
     cout << "Saldo de la cuenta " << noCuenta << ": $" << miBanco.ObtenerSaldo(noCuenta)
          << endl;
 }
+
 void Inicio::MenuLista()
 {
     int opcion = -1;
@@ -182,6 +186,7 @@ void Inicio::MenuLista()
         }
     }
 }
+
 void Inicio::MenuCuenta()
 {
     int opcion = -1;
@@ -225,6 +230,7 @@ void Inicio::EstadoDeCuenta()
 
     miBanco.EstadoCuenta(noCuenta);
 }
+
 void Inicio::Menu()
 {
     int opcion = -1;
@@ -265,6 +271,7 @@ void Inicio::Menu()
         }
     }
 }
+
 void Inicio::Ejecutar()
 {
     int guardado = Cuenta::N;

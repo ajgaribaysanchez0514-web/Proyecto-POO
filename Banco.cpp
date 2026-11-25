@@ -1,8 +1,10 @@
 #include "Banco.h"
 #include <iostream>
 using namespace std;
+    
 Banco::Banco()
 {
+    
 }
 void Banco::CrearCuenta(string nombre, string direccion, string telefono, double saldo)
 {
@@ -33,6 +35,7 @@ int Banco::ObtenerNoCuenta(string nombre)
 {
     return c.ObtenerNoCuenta(nombre);
 }
+
 double Banco::ObtenerSaldo(int noCuenta)
 {
     Cuenta *cuenta = c.ObtenerCuenta(noCuenta);

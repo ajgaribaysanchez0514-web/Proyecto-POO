@@ -1,6 +1,7 @@
 #include "Lista.h"
 #include <iostream>
 using namespace std;
+
 Lista::Lista()
 {
     p = 0;
@@ -17,6 +18,7 @@ void Lista::Crear(Cliente *c)
         cout << "La lista está llena" << endl;
     }
 }
+
 void Lista::Borrar(int noCuenta)
 {
     for (int i = 0; i < p; i++)
@@ -33,6 +35,7 @@ void Lista::Borrar(int noCuenta)
         }
     }
 }
+
 int Lista::ObtenerNoCuenta(string nombre)
 {
     for (int i = 0; i < p; i++)
@@ -44,6 +47,7 @@ int Lista::ObtenerNoCuenta(string nombre)
     }
     return -1;
 }
+
 Cliente *Lista::ObtenerCliente(int noCuenta)
 {
     for (int i = 0; i < p; i++)
@@ -55,6 +59,7 @@ Cliente *Lista::ObtenerCliente(int noCuenta)
     }
     return NULL;
 }
+
 Cuenta *Lista::ObtenerCuenta(int noCuenta)
 {
     for (int i = 0; i < p; i++)
@@ -66,6 +71,7 @@ Cuenta *Lista::ObtenerCuenta(int noCuenta)
     }
     return NULL;
 }
+
 void Lista::Estado()
 {
     for (int i = 0; i < p; i++)
